@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Research – DNS &amp; ISPL</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-c3299e1b907d8d012774e276eed2e62a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Research – DNS &amp; ISPL">
+<meta property="og:site_name" content="DNS &amp; ISPL">
+<meta name="twitter:title" content="Research – DNS &amp; ISPL">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">DNS &amp; ISPL</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-courses" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Courses</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-courses">    
+        <li>
+    <a class="dropdown-item" href="./courses/index.html">
+ <span class="dropdown-text">전체 강의 보기</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="./courses/npd-innovation.html">
+ <span class="dropdown-text">1학기 · 신제품개발과 혁신 (학부)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./courses/npd-management.html">
+ <span class="dropdown-text">1학기 · 신제품개발 및 관리 (학부)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./courses/data-science.html">
+ <span class="dropdown-text">1학기 · 데이터사이언스개론 (학부)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./courses/tech-forecasting.html">
+ <span class="dropdown-text">1학기 · 기술예측분석시스템 (대학원)</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="./courses/digital-industry.html">
+ <span class="dropdown-text">2학기 · 디지털산업융합론 (학부)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./courses/statistics-practice.html">
+ <span class="dropdown-text">2학기 · 통계분석 및 실무 (학부)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./courses/npd-theory.html">
+ <span class="dropdown-text">2학기 · 신상품개발론 (대학원)</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="./research.html" aria-current="page"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./projects.html"> 
+<span class="menu-text">Proj</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./blogs.html"> 
+<span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lab.html"> 
+<span class="menu-text">LAB</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Research</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!-- AUTO-GENERATED publication list. Edit gen_pubs.py and re-run to update. -->
+<div class="pub-wrap">
+<p class="pub-summary">
+<span class="pub-stat"><strong>38</strong> peer-reviewed articles</span><span class="pub-stat"><strong>20</strong> international (SSCI / SCI / Scopus)</span><span class="pub-stat"><strong>18</strong> Korean (KCI)</span>
+</p>
+<section id="international-journals" class="level3">
+<h3 class="anchored" data-anchor-id="international-journals">International Journals</h3>
+<ol class="pub-list">
+<li class="pub-item">
+<span class="pub-badge b-ssci">SSCI</span> <span class="pub-cite">Choi, Y., <span class="pub-me">Shim, D.</span>, Park, Y., &amp; Lee, C. (2025). Gamification in the Metaverse: How Design Attributes Shape User Preferences Across Age Groups. <i>Journal of Theoretical and Applied Electronic Commerce Research, 20</i>(4), 310. <a href="https://doi.org/10.3390/jtaer20040310" target="_blank" rel="noopener">https://doi.org/10.3390/jtaer20040310</a></span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-ssci">SSCI</span> <span class="pub-cite"><span class="pub-me">Shim, D.</span> (2025). Journey from light viewer to heavy viewer when you get engaged in OTT: a Hidden Markov Model approach. <i>Journal of Media Economics</i>, 1–21. <a href="https://doi.org/10.1080/08997764.2025.2535329" target="_blank" rel="noopener">https://doi.org/10.1080/08997764.2025.2535329</a></span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-scopus">Scopus</span> <span class="pub-cite">Kang, S., Altmann, J., &amp; <span class="pub-me">Shim, D.</span> (2025). Consumer Insights from South Korea’s Publicly Accredited e-Payment Electronic Certification System by Evaluating Security Preferences and Willingness to Pay. <i>International Journal of Networked and Distributed Computing, 13</i>, 24. <a href="https://doi.org/10.1007/s44227-025-00064-1" target="_blank" rel="noopener">https://doi.org/10.1007/s44227-025-00064-1</a></span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-sci">SCI</span> <span class="pub-cite"><span class="pub-me">Shim, D.</span> (2025). Quantifying Social Benefits of Virtual Power Plants (VPPs) in South Korea: Contingent Valuation Method. <i>Energies, 18</i>(12), 3006.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-ssci">SSCI</span> <span class="pub-cite"><span class="pub-me">Shim, D.</span>, Choi, Y., &amp; Lee, C. (2025). Exploring the competitive market structure of digital-based subscription economy: The empirical investigation of South Korea. <i>Telematics and Informatics, 98</i>, 102264.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-ssci">SSCI</span> <span class="pub-cite">Kim, K., Maliphol, S., <span class="pub-me">Shim, D.</span>, &amp; Lee, C. (2024). Exploring the interplay between social distancing, innovation adoption, and privacy concerns amid the COVID-19 crisis. <i>Science and Public Policy, 51</i>(6), 1257–1266.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-ssci">SSCI</span> <span class="pub-cite"><span class="pub-me">Shim, D.</span> (2024). Interplay between Platform Providers and Complementors via Affordance, Autonomy, and Super-Modularity: The Empirical Investigation of the Korean Digital Industry. <i>Journal of Theoretical and Applied Electronic Commerce Research, 19</i>(2), 975–992.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-ssci">SSCI</span> <span class="pub-cite">Choi, H., <span class="pub-me">Shim, D.</span>, &amp; Kim, S. W. (2024). Heterogeneous public preferences for undergrounding high-voltage power transmission lines: The case of Seoul metropolitan area in South Korea. <i>Energy Economics, 132</i>, 107448.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-ssci">SSCI</span> <span class="pub-cite"><span class="pub-me">Shim, D.</span>, Choi, H., &amp; Kim, S. W. (2024). Heterogeneous public attitudes toward high-voltage power transmission lines and willingness to pay for undergrounding projects. <i>Energy &amp; Environment, 35</i>(7), 3736–3758.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-ssci">SSCI</span> <span class="pub-cite"><span class="pub-me">Shim, D.</span>, Lee, C., &amp; Oh, I. (2022). Analysis of OTT Users’ Watching Behavior for Identifying a Profitable Niche: Latent Class Regression Approach. <i>Journal of Theoretical and Applied Electronic Commerce Research, 17</i>(4), 1564–1580.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-ssci">SSCI</span> <span class="pub-cite"><span class="pub-me">Shim, D.</span> (2021). Capturing heterogeneous decision making processes: The case with the E-book reader market. <i>International Journal of Market Research, 63</i>(2), 216–235.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-ssci">SSCI</span> <span class="pub-cite">Hwang, W. S., &amp; <span class="pub-me">Shim, D.</span> (2021). Measuring the impact of ICT-driven product and process innovation on the Korean economy. <i>Global Economic Review, 50</i>(3), 235–253.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-ssci">SSCI</span> <span class="pub-cite">Oh, I., &amp; <span class="pub-me">Shim, D.</span> (2020). IT adoption and sustainable growth of firms in different industries—are the benefits still expected? <i>Sustainability, 12</i>(22), 9689.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-ssci">SSCI</span> <span class="pub-cite">Oh, S., <span class="pub-me">Shim, D.</span>, &amp; Lee, D. (2020). Evaluation of complementarity effect of innovation policies: Venture certification and Inno-biz certification in Korea. <i>The Singapore Economic Review, 65</i>(02), 385–402.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-ssci">SSCI</span> <span class="pub-cite"><span class="pub-me">Shim, D.</span>, Shin, J., &amp; Kwak, S. Y. (2018). Modelling the consumer decision-making process to identify key drivers and bottlenecks in the adoption of environmentally friendly products. <i>Business Strategy and the Environment, 27</i>(8), 1409–1421.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-ssci">SSCI</span> <span class="pub-cite"><span class="pub-me">Shim, D.</span>, Kim, S. W., Altmann, J., Yoon, Y. T., &amp; Kim, J. G. (2018). Key features of electric vehicle diffusion and its impact on the Korean power market. <i>Sustainability, 10</i>(6), 1941.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-ssci">SSCI</span> <span class="pub-cite"><span class="pub-me">Shim, D.</span>, Kim, S. W., &amp; Altmann, J. (2018). Strategic management of residential electric services in the competitive market: Demand-oriented perspective. <i>Energy &amp; Environment, 29</i>(1), 49–66.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-ssci">SSCI</span> <span class="pub-cite"><span class="pub-me">Shim, D.</span>, Kim, J. G., &amp; Altmann, J. (2016). Strategic management of R&amp;D and marketing integration for multi-dimensional success of new product developments: an empirical investigation in the Korean ICT industry. <i>Asian Journal of Technology Innovation, 24</i>(3), 293–316.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-ssci">SSCI</span> <span class="pub-cite"><span class="pub-me">Shim, D.</span>, Kim, J. G., &amp; Altmann, J. (2016). Identifying key drivers and bottlenecks in the adoption of E-book readers in Korea. <i>Telematics and Informatics, 33</i>(3), 860–871.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-ssci">SSCI</span> <span class="pub-cite">Yeo, Y., <span class="pub-me">Shim, D.</span>, Lee, J. D., &amp; Altmann, J. (2015). Driving forces of CO<sub>2</sub> emissions in emerging countries: LMDI decomposition analysis on China and India’s residential sector. <i>Sustainability, 7</i>(12), 16108–16129.</span>
+</li>
+</ol>
+</section>
+<section id="korean-citation-index-kci-journals" class="level3">
+<h3 class="anchored" data-anchor-id="korean-citation-index-kci-journals">Korean Citation Index (KCI) Journals</h3>
+<ol class="pub-list">
+<li class="pub-item">
+<span class="pub-badge b-kci">KCI</span> <span class="pub-cite">김성윤, 최동환, <span class="pub-me">심동녘</span>. (2025). 시험인증산업에서 기밀보안성과 전문성에 대한 수요기업 선호 분석과 서비스 고도화 방안. <i>산업연구, 9</i>(2), 66–99.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-kci">KCI</span> <span class="pub-cite">최동환, 김성윤, 김슬하, <span class="pub-me">심동녘</span>. (2025). 시험·인증 서비스 수요기업 선호 분석: 신속성, 편의성 및 해외인증 컨설팅을 중심으로. <i>서비스 연구, 15</i>(2), 1–19.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-kci">KCI</span> <span class="pub-cite">김성윤, <span class="pub-me">심동녘</span>. (2024). 고안전 융합제품 개발산업의 소프트웨어(SW) 안전 수준 제고를 위한 정책수단의 상대적 중요도 평가. <i>한국혁신학회지, 19</i>(4), 217–247.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-kci">KCI</span> <span class="pub-cite">김태균, <span class="pub-me">심동녘</span>. (2024). 조건부가치측정법(CVM)을 활용한 지능형 CCTV 플랫폼의 편익 추정 연구. <i>산업융합연구, 22</i>(7), 1–13.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-kci">KCI</span> <span class="pub-cite">방효민, <span class="pub-me">심동녘</span>. (2024). 패션·의류 신제품 개발에서 기능 부서 간 협업이 신제품 성과에 미치는 영향. <i>상품학연구, 42</i>(2), 57–64.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-kci">KCI</span> <span class="pub-cite"><span class="pub-me">심동녘</span>, 인혁준. (2023). AI 채용 시스템의 공정성, 신뢰성, 혁신특성이 이용자의 태도에 미치는 영향. <i>상품학연구, 41</i>(5), 49–58.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-kci">KCI</span> <span class="pub-cite"><span class="pub-me">심동녘</span>. (2023). Heckman 2단계 모형을 활용한 주말과 주중 OTT 시청시간결정요인 비교 분석. <i>한국혁신학회지, 18</i>(3), 89–108.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-kci">KCI</span> <span class="pub-cite">방효민, <span class="pub-me">심동녘</span>. (2023). 패션·의류 신제품개발 프로젝트에서 자원 적합성이 시장적기출시와 제품혁신성에 미치는 영향. <i>글로벌경영학회지, 20</i>(3), 105–129.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-kci">KCI</span> <span class="pub-cite">고동환, <span class="pub-me">심동녘</span>. (2022). 중국경제 구조조정과 첨단기술 육성전략에 따른 한국 ICT 수출의 구조적 단절 연구. <i>한국혁신학회지, 17</i>(4), 69–84.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-kci">KCI</span> <span class="pub-cite">방효민, <span class="pub-me">심동녘</span>. (2022). 패션기업 디지털전환 성공요인 및 이행전략의 중요도 평가. <i>글로벌경영학회지, 19</i>(5), 1–25.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-kci">KCI</span> <span class="pub-cite">이종서, <span class="pub-me">심동녘</span>. (2022). 잠재계층분석(LCA)을 활용한 가공송전선로 건설에 대한 인식과 태도의 유형 및 특성 연구. <i>환경정책, 30</i>(1), 93–115.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-kci">KCI</span> <span class="pub-cite"><span class="pub-me">심동녘</span>, 고동환. (2022). 인공지능(AI) 기술도입에 따른 산업별 노동수요변화 탐색. <i>한국혁신학회지, 17</i>(1), 85–103.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-kci">KCI</span> <span class="pub-cite"><span class="pub-me">심동녘</span>. (2021). 미디어이용자의 OTT 이용행태 결정요인 분석: 유료방송 시청요인과 이용자 혁신성향을 중심으로. <i>한국혁신학회지, 16</i>(3), 221–245.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-kci">KCI</span> <span class="pub-cite">최현홍, <span class="pub-me">심동녘</span>. (2020). 텍스트마이닝을 적용한 ICT융합 트렌드 분석. <i>한국혁신학회지, 15</i>(3), 257–281.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-kci">KCI</span> <span class="pub-cite"><span class="pub-me">심동녘</span>, 오승환. (2018). 연구개발특구가 입주기업에 미치는 영향에 관한 연구. <i>한국혁신학회지, 13</i>(1), 169–191.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-kci">KCI</span> <span class="pub-cite">강송희, <span class="pub-me">심동녘</span>, 백필호. (2015). 소프트시스템 모델 방법론을 통해 진단한 국내 공개 SW 산업의 문제점과 정책전략 연구. <i>한국전자거래학회지, 20</i>(4), 193–208.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-kci">KCI</span> <span class="pub-cite">오승환, <span class="pub-me">심동녘</span>, 김규남. (2015). 벤처인증정책과 이노비즈인증정책의 중복효과에 대한 연구: ICT산업을 중심으로. <i>기술혁신학회지, 18</i>(2), 358–386.</span>
+</li>
+<li class="pub-item">
+<span class="pub-badge b-kci">KCI</span> <span class="pub-cite"><span class="pub-me">심동녘</span>, 김응도, 황준석. (2015). 소셜커머스에서 소비자 충동구매행위에 영향을 미치는 요인에 관한 연구. <i>글로벌경영학회지, 12</i>(1), 263–294.</span>
+</li>
+</ol>
+</section>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/dongdahi\.github\.io\/ispl\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 Dongnyok Shim · License: CC BY-SA 4.0</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/dongdahi">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
