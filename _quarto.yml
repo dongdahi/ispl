@@ -7,7 +7,7 @@ project:
 
 website:
   title: "DNS & ISPL"
-  site-url: "site-url: "https://dongdahi.github.io/ispl/"   # ← 최종 URL (슬래시로 끝내기)
+  site-url: "https://dongdahi.github.io/ispl/"
   open-graph: true
   twitter-card: true
   search: true
