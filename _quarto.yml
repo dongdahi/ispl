@@ -1,0 +1,63 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "!partials/**"     # partials 폴더는 독립 페이지로 렌더 제외(권장)
+
+website:
+  title: "DNS & ISPL"
+  site-url: "site-url: "https://dongdahi.github.io/ispl/"   # ← 최종 URL (슬래시로 끝내기)
+  open-graph: true
+  twitter-card: true
+  search: true
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+    right:
+      - href: about.qmd
+        text: About
+      - text: "Courses"
+        menu:
+          - text: "전체 강의 보기"
+            href: courses/index.qmd
+          - text: "---"
+          - text: "1학기 · 신제품개발과 혁신 (학부)"
+            href: courses/npd-innovation.qmd
+          - text: "1학기 · 신제품개발 및 관리 (학부)"
+            href: courses/npd-management.qmd
+          - text: "1학기 · 데이터사이언스개론 (학부)"
+            href: courses/data-science.qmd
+          - text: "1학기 · 기술예측분석시스템 (대학원)"
+            href: courses/tech-forecasting.qmd
+          - text: "---"
+          - text: "2학기 · 디지털산업융합론 (학부)"
+            href: courses/digital-industry.qmd
+          - text: "2학기 · 통계분석 및 실무 (학부)"
+            href: courses/statistics-practice.qmd
+          - text: "2학기 · 신상품개발론 (대학원)"
+            href: courses/npd-theory.qmd
+      - href: research.qmd
+        text: Research
+      - href: projects.qmd
+        text: Proj
+      - href: blogs.qmd
+        text: Blogs
+      - href: lab.qmd
+        text: LAB
+  page-footer:
+    left: "© 2025 Dongnyok Shim · License: CC BY-SA 4.0"
+    right:
+      - icon: github
+        href: https://github.com/dongdahi
+
+format:
+  html:
+    theme:
+      light: [cosmo, brand.scss]   # SCSS로 네비 색상 등 오버라이드
+    css: styles.css
+    toc: true
+    canonical: true
+
+editor: visual

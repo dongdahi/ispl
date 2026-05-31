@@ -1,0 +1,34 @@
+---
+title: "Dongnyok Shim"
+page-layout: custom
+---
+
+::::: profile-container
+::: profile-image
+![](images/Dongnyok_Shim.jpg)
+:::
+
+::: profile-content
+I am an Associate Professor at the School of Interdisciplinary Industrial Management, College of Engineering, Konkuk University in Seoul, Republic of Korea. As the leader of the Innovation Strategy and Policy Lab (ISPL), my research focuses on Innovation strategy and Innovation policy, with particular emphasis on quantitative analysis and market strategy for new products and services.
+
+I lead the ISPL (Innovation Strategy and Policy Lab), where we focus on digital transformation, market strategies, and innovation policies to enhance business competitiveness. In my free time, you'll often find me exploring new technologies, analyzing market trends, or engaging with industry partners on collaborative projects.
+
+About me more... [here](about.qmd)
+:::
+:::::
+
+
+::: social-links
+[🧪 Lab](lab.qmd){.social-button}
+[📚 Publications](research.qmd){.social-button}
+[🎓 About](about.qmd){.social-button}
+[✉️ Email](mailto:sk4me@konkuk.ac.kr){.social-button}
+<!-- 아래 링크는 실제 주소로 바꿔서 사용하세요 (불필요하면 삭제)
+[Google Scholar](https://scholar.google.com/citations?user=YOUR_ID){.social-button}
+[ORCID](https://orcid.org/0000-0000-0000-0000){.social-button}
+[LinkedIn](https://www.linkedin.com/in/YOUR_ID){.social-button}
+-->
+:::
+
+::: divider
+:::
