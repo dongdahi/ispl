@@ -1,0 +1,99 @@
+/*-- scss:defaults --*/
+// paper2lecture — lecture-maker 색상 팔레트 차용 + 보조색
+// 슬라이드 1계위 섹션 수(N)에 따라 섹션별 색을 적용한다(매핑 규칙은 slide_structure.md).
+//   N≤5 : 5색 순차  /  N=6 : +#6A4C93  /  N=7 : +#8D99AE  /  N≥8 : 5색 순환
+
+// ---- 팔레트 (단일 진실 소스) -------------------------------------------
+$p2l-1: #264653 !default;  // 딥 틸
+$p2l-2: #2A9D8F !default;  // 그린 틸
+$p2l-3: #E76F51 !default;  // 코랄
+$p2l-4: #E9C46A !default;  // 머스터드
+$p2l-5: #457B9D !default;  // 스틸 블루
+$p2l-6: #6A4C93 !default;  // 보조: 다크 퍼플 (N=6,7)
+$p2l-7: #8D99AE !default;  // 보조: 스틸 그레이 (N=7)
+
+$p2l-ink:  #1d2b30 !default;   // 본문 텍스트
+$p2l-bg:   #ffffff !default;
+$p2l-muted:#5c6b73 !default;
+
+// ---- reveal.js 테마 변수 매핑 ------------------------------------------
+$body-bg: $p2l-bg !default;
+$body-color: $p2l-ink !default;
+$link-color: $p2l-2 !default;
+$selection-bg: rgba($p2l-3, 0.3) !default;
+
+// 한글 폰트 스택 (Windows: 맑은 고딕 / Mac: 애플 고딕 / Linux: 나눔)
+$font-family-sans-serif: "Pretendard", "Malgun Gothic", "맑은 고딕",
+  "Apple SD Gothic Neo", "AppleGothic", "NanumGothic", "Noto Sans KR",
+  -apple-system, sans-serif !default;
+$presentation-font-family: $font-family-sans-serif !default;
+$presentation-heading-font: $font-family-sans-serif !default;
+$presentation-heading-color: $p2l-1 !default;
+
+$presentation-font-size-root: 32px !default;
+$presentation-h1-font-size: 1.9em !default;
+$presentation-h2-font-size: 1.4em !default;
+$presentation-h3-font-size: 1.1em !default;
+
+/*-- scss:rules --*/
+
+// 섹션 구분 슬라이드(1계위) — 색상은 .sec-N 클래스로 지정
+@for $i from 1 through 7 {
+  $colors: ($p2l-1, $p2l-2, $p2l-3, $p2l-4, $p2l-5, $p2l-6, $p2l-7);
+  .reveal section.sec-#{$i} h1,
+  .reveal section.sec-#{$i} h2 {
+    color: nth($colors, $i);
+  }
+  // 섹션 표지(divider) 슬라이드 배경
+  .reveal section.divider.sec-#{$i} {
+    background: nth($colors, $i);
+    h1, h2, h3, p { color: #fff; }
+  }
+  // 좌측 강조 바
+  .reveal section.sec-#{$i} > h2:first-child {
+    border-left: 6px solid nth($colors, $i);
+    padding-left: 0.5em;
+  }
+}
+
+// 강조 박스
+.reveal .callout-key {
+  background: rgba($p2l-2, 0.10);
+  border-left: 5px solid $p2l-2;
+  padding: 0.6em 0.9em; border-radius: 4px; margin: 0.5em 0;
+}
+.reveal .callout-warn {
+  background: rgba($p2l-3, 0.10);
+  border-left: 5px solid $p2l-3;
+  padding: 0.6em 0.9em; border-radius: 4px; margin: 0.5em 0;
+}
+
+// 명목 메인 vs 실질 기여 배지
+.reveal .badge-nominal,
+.reveal .badge-contrib {
+  display: inline-block; font-size: 0.6em; font-weight: 700;
+  padding: 1px 8px; border-radius: 10px; vertical-align: middle;
+  margin-left: 6px; color: #fff;
+}
+.reveal .badge-nominal { background: $p2l-5; }   // 명목 메인 결과
+.reveal .badge-contrib { background: $p2l-3; }   // 실질 핵심 기여
+
+// 표 가독성
+.reveal table { font-size: 0.78em; border-collapse: collapse; }
+.reveal table thead th {
+  background: $p2l-1; color: #fff; padding: 0.3em 0.6em;
+}
+.reveal table td, .reveal table th { border: 1px solid #dde3e6; padding: 0.25em 0.6em; }
+
+// 오버플로우 방지 보조 (상세 규칙은 overflow_rules.md)
+.reveal .smaller { font-size: 0.72em; }
+.reveal .smaller-2 { font-size: 0.62em; }
+.reveal .tight li { margin-bottom: 0.15em; line-height: 1.25; }
+.reveal section.scroll { overflow-y: auto; max-height: 92vh; }
+
+// 출처/캡션
+.reveal .source-note {
+  position: absolute; bottom: 8px; left: 24px;
+  font-size: 0.45em; color: $p2l-muted;
+}
+.reveal figcaption, .reveal caption { font-size: 0.6em; color: $p2l-muted; }
