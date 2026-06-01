@@ -302,7 +302,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- AUTO-GENERATED publication list. Edit gen_pubs.py and re-run to update. -->
 <div class="pub-wrap">
 <p class="pub-summary">
-<span class="pub-stat"><strong>38</strong> peer-reviewed articles</span><span class="pub-stat"><strong>20</strong> international (SSCI / SCI / Scopus)</span><span class="pub-stat"><strong>18</strong> Korean (KCI)</span>
+<span class="pub-stat"><strong id="pub-total">38</strong> peer-reviewed articles</span><span class="pub-stat"><strong id="pub-intl">20</strong> international (SSCI / SCI / Scopus)</span><span class="pub-stat"><strong id="pub-kci">18</strong> Korean (KCI)</span>
 </p>
 <section id="international-journals" class="level3">
 <h3 class="anchored" data-anchor-id="international-journals">International Journals</h3>
@@ -429,6 +429,21 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </section>
 </div>
+<script>
+// 논문 항목 수를 자동으로 세어 상단 요약 숫자를 갱신합니다.
+// (논문을 추가/삭제하면 숫자가 알아서 바뀝니다 — 손으로 고칠 필요 없음)
+document.addEventListener("DOMContentLoaded", function () {
+  var total = document.querySelectorAll(".pub-item").length;
+  var kci   = document.querySelectorAll(".pub-badge.b-kci").length;
+  var intl  = total - kci;
+  var elT = document.getElementById("pub-total");
+  var elI = document.getElementById("pub-intl");
+  var elK = document.getElementById("pub-kci");
+  if (elT) elT.textContent = total;
+  if (elI) elI.textContent = intl;
+  if (elK) elK.textContent = kci;
+});
+</script>
 
 
 </section>
