@@ -2,15 +2,13 @@
   {
     "listing": "/blog/index.html",
     "items": [
-      "/blog/posts/norway-ev-incentives/index.html",
-      "/blog/posts/example-digital-transformation/index.html"
+      "/blog/posts/norway-ev-incentives/index.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
-      "/blog/posts/norway-ev-incentives/index.html",
-      "/blog/posts/example-digital-transformation/index.html"
+      "/blog/posts/norway-ev-incentives/index.html"
     ]
   }
 ]
