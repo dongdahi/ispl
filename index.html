@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Blog – DNS &amp; ISPL</title>
+<title>Dongnyok Shim – DNS &amp; ISPL</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,8 +33,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -72,72 +70,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-categories','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="DNS &amp; ISPL" href="index.xml" data-external="1"><meta property="og:title" content="Blog – DNS &amp; ISPL">
-<meta property="og:description" content="논문 리뷰와 리딩 노트 — Paper reviews &amp; reading notes">
+<meta property="og:title" content="Dongnyok Shim – DNS &amp; ISPL">
 <meta property="og:site_name" content="DNS &amp; ISPL">
-<meta name="twitter:title" content="Blog – DNS &amp; ISPL">
-<meta name="twitter:description" content="논문 리뷰와 리딩 노트 — Paper reviews &amp; reading notes">
+<meta name="twitter:title" content="Dongnyok Shim – DNS &amp; ISPL">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -233,23 +171,19 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RW5lcmd5JTIwVHJhbnNmb3JtYXRpb24=">Energy Transformation <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Blog</h1>
-<p class="subtitle lead">논문 리뷰와 리딩 노트 — Paper reviews &amp; reading notes</p>
+<h1 class="title">Dongnyok Shim</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
 
     
   
@@ -261,38 +195,30 @@ window.Quarto = {
 </header>
 
 
-<p>세 가지 주제로 글을 분류합니다 — <strong>Market Analysis · Digital Transformation · Energy Transformation</strong>. 각 글 머리말의 <code>categories:</code> 에 주제를 적으면 오른쪽 카테고리 목록에서 주제별로 모아 볼 수 있습니다. (카테고리는 해당 주제의 글이 하나라도 생기면 자동으로 나타납니다.)</p>
+<div class="profile-container">
+<div class="profile-image">
+<p><img src="images/Dongnyok_Shim.jpg" class="img-fluid"></p>
+</div>
+<div class="profile-content">
+<p>I am an Associate Professor at the School of Interdisciplinary Industrial Management, College of Engineering, Konkuk University in Seoul, Republic of Korea. As the leader of the Innovation Strategy and Policy Lab (ISPL), my research focuses on Innovation strategy and Innovation policy, with particular emphasis on quantitative analysis and market strategy for new products and services.</p>
+<p>I lead the ISPL (Innovation Strategy and Policy Lab), where we focus on digital transformation, market strategies, and innovation policies to enhance business competitiveness. In my free time, you’ll often find me exploring new technologies, analyzing market trends, or engaging with industry partners on collaborative projects.</p>
+<p>About me more… <a href="./about.html">here</a></p>
+</div>
+</div>
+<div class="social-links">
+<p><a href="./lab.html" class="social-button">🧪 Lab</a> <a href="./research.html" class="social-button">📚 Publications</a> <a href="./about.html" class="social-button">🎓 About</a> <a href="mailto:sk4me@konkuk.ac.kr" class="social-button">✉️ Email</a> <!-- 아래 링크는 실제 주소로 바꿔서 사용하세요 (불필요하면 삭제)
+[Google Scholar](https://scholar.google.com/citations?user=YOUR_ID){.social-button}
+[ORCID](https://orcid.org/0000-0000-0000-0000){.social-button}
+[LinkedIn](https://www.linkedin.com/in/YOUR_ID){.social-button}
+--></p>
+</div>
+<div class="divider">
+
+</div>
 
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="RW5lcmd5JTIwVHJhbnNmb3JtYXRpb24=" data-listing-date-sort="1779840000000" data-listing-file-modified-sort="1780284521133" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="85">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/posts/norway-ev-incentives/index.html" class="no-external">노르웨이의 전기차 인센티브 평가 — 노트 &amp; 슬라이드</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RW5lcmd5JTIwVHJhbnNmb3JtYXRpb24='); return false;">Energy Transformation</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/posts/norway-ev-incentives/index.html" class="no-external">
-<p>Cincotta &amp; Thomassen (Energy Economics, 2025) 논문 해설. BLP 무작위계수 수요모형 + 과점 공급으로 노르웨이 EV 인센티브의 기여를 분해하고, 구매세 면제가 가장 큰 지렛대(없으면 점유율 66%→25%)임을 보인 연구.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/posts/norway-ev-incentives/index.html" class="no-external">
-<div class="listing-date">
-May 27, 2026
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
