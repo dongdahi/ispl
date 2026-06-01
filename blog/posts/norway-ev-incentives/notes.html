@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Dongnyok Shim">
+
+<title>노르웨이의 전기차 인센티브 평가 — 독서 노트 – DNS &amp; ISPL</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-c3299e1b907d8d012774e276eed2e62a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="노르웨이의 전기차 인센티브 평가 — 독서 노트 – DNS &amp; ISPL">
+<meta property="og:description" content="Evaluating Norway’s Electric Vehicle Incentives — Cincotta &amp; Thomassen (Energy Economics, 2025)">
+<meta property="og:site_name" content="DNS &amp; ISPL">
+<meta name="twitter:title" content="노르웨이의 전기차 인센티브 평가 — 독서 노트 – DNS &amp; ISPL">
+<meta name="twitter:description" content="Evaluating Norway’s Electric Vehicle Incentives — Cincotta &amp; Thomassen (Energy Economics, 2025)">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">DNS &amp; ISPL</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="검색"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="탐색 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-courses" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Courses</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-courses">    
+        <li>
+    <a class="dropdown-item" href="../../../courses/index.html">
+ <span class="dropdown-text">전체 강의 보기</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../../../courses/npd-innovation.html">
+ <span class="dropdown-text">1학기 · 신제품개발과 혁신 (학부)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../courses/npd-management.html">
+ <span class="dropdown-text">1학기 · 신제품개발 및 관리 (학부)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../courses/data-science.html">
+ <span class="dropdown-text">1학기 · 데이터사이언스개론 (학부)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../courses/tech-forecasting.html">
+ <span class="dropdown-text">1학기 · 기술예측분석시스템 (대학원)</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../../../courses/digital-industry.html">
+ <span class="dropdown-text">2학기 · 디지털산업융합론 (학부)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../courses/statistics-practice.html">
+ <span class="dropdown-text">2학기 · 통계분석 및 실무 (학부)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../courses/npd-theory.html">
+ <span class="dropdown-text">2학기 · 신상품개발론 (대학원)</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../research.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../projects.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../lab.html"> 
+<span class="menu-text">LAB</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul class="collapse">
+  <li><a href="#개요" id="toc-개요" class="nav-link active" data-scroll-target="#개요"><span class="header-section-number">1</span> 개요</a></li>
+  <li><a href="#변수-정의" id="toc-변수-정의" class="nav-link" data-scroll-target="#변수-정의"><span class="header-section-number">2</span> 변수 정의</a></li>
+  <li><a href="#모형과-식별-전략" id="toc-모형과-식별-전략" class="nav-link" data-scroll-target="#모형과-식별-전략"><span class="header-section-number">3</span> 모형과 식별 전략</a></li>
+  <li><a href="#섹션별-해설" id="toc-섹션별-해설" class="nav-link" data-scroll-target="#섹션별-해설"><span class="header-section-number">4</span> 섹션별 해설</a></li>
+  <li><a href="#주요-결과-해석" id="toc-주요-결과-해석" class="nav-link" data-scroll-target="#주요-결과-해석"><span class="header-section-number">5</span> 주요 결과 해석</a></li>
+  <li><a href="#강건성-한계" id="toc-강건성-한계" class="nav-link" data-scroll-target="#강건성-한계"><span class="header-section-number">6</span> 강건성 / 한계</a></li>
+  <li><a href="#보충-자료-슬라이드-생략-섹션" id="toc-보충-자료-슬라이드-생략-섹션" class="nav-link" data-scroll-target="#보충-자료-슬라이드-생략-섹션"><span class="header-section-number">7</span> 보충 자료 (슬라이드 생략 섹션)</a></li>
+  <li><a href="#참고문헌-선별-원문-유지" id="toc-참고문헌-선별-원문-유지" class="nav-link" data-scroll-target="#참고문헌-선별-원문-유지"><span class="header-section-number">8</span> 참고문헌 (선별, 원문 유지)</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">노르웨이의 전기차 인센티브 평가 — 독서 노트</h1>
+<p class="subtitle lead">Evaluating Norway’s Electric Vehicle Incentives — Cincotta &amp; Thomassen (Energy Economics, 2025)</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Energy Transformation</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">저자</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dongnyok Shim </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">공개</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">2026년 5월 27일</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="개요" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="개요"><span class="header-section-number">1</span> 개요</h2>
+<p>이 논문은 세계 최고의 전기차(EV) 점유율(2021년 신차의 66%)을 달성한 노르웨이를 사례로, <strong>어떤 정책이 EV 채택을 얼마나 끌어올렸는지</strong>를 구조 모형으로 정량화한다. 핵심 아이디어는 단순하다. 신차시장 전체를 BLP(Berry–Levinsohn–Pakes, 1995) 류의 <strong>무작위계수 이산선택 수요모형</strong>과 <strong>과점(베르트랑–내쉬) 공급</strong>으로 추정한 뒤, 특정 인센티브를 “끈” 가상의 세계에서 기업의 가격설정까지 다시 균형으로 풀어 결과(점유율·배출·무게·세수·후생)를 비교하는 것이다.</p>
+<p>명목상의 메인 결과(논문이 전면에 내세우는 수치)는 §6의 반사실 실험이다: <strong>EV 구매세 면제를 없애면 점유율이 66%→25%로 가장 크게 떨어진다.</strong> 그러나 학술적 기여가 실제로 위치한 곳은 §3의 <strong>구조 모형 자체</strong> — 22년치 데이터로 소비자측 인센티브 전반을 한 틀에서 식별하고, 균형 가격 전가·후생까지 일관되게 계산할 수 있게 한 점이다.</p>
+</section>
+<section id="변수-정의" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="변수-정의"><span class="header-section-number">2</span> 변수 정의</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>변수명(원문)</th>
+<th>한국어 라벨</th>
+<th>역할</th>
+<th>단위</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(S_{jt}\)</span></td>
+<td>제품 <span class="math inline">\(j\)</span>의 관측 시장점유율(연도 <span class="math inline">\(t\)</span>)</td>
+<td>종속변수</td>
+<td>비율</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(p_{jt}\)</span></td>
+<td>신차 판매가격(소비자 지불가, 등록세·VAT 포함)</td>
+<td>핵심 설명변수(내생)</td>
+<td>백만 NOK(2021 CPI)</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(dcost\)</span></td>
+<td>주행 에너지비용(1km 주행 비용)</td>
+<td>핵심 설명변수</td>
+<td>NOK/10km</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathbf{1}^{EV}_j\)</span></td>
+<td>전기차 더미</td>
+<td>핵심 설명변수</td>
+<td>0/1</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(x_{jt}\)</span> (kW)</td>
+<td>엔진 출력</td>
+<td>통제(특성)</td>
+<td>100 kW</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(x_{jt}\)</span> (weight)</td>
+<td>차량 무게</td>
+<td>통제(특성)</td>
+<td>1000 kg</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(x_{jt}\)</span> (length)</td>
+<td>차량 길이</td>
+<td>통제(특성)</td>
+<td>m</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(x_{jt}\)</span> (CO₂)</td>
+<td>CO₂ 배출량</td>
+<td>통제(특성)</td>
+<td>100 g/km</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\tau_{jt}\)</span></td>
+<td>등록세</td>
+<td><strong>가격의 도구변수</strong></td>
+<td>백만 NOK</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(z_{jt}\)</span></td>
+<td>Gandhi–Houde 차별화 도구(경쟁제품과의 특성 거리·교호항)</td>
+<td>도구변수(<span class="math inline">\(\Sigma\)</span> 식별)</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(a_t\)</span></td>
+<td>연도 고정효과</td>
+<td>고정효과</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(b_t\)</span></td>
+<td>EV-연도 효과(기타 EV 인센티브·충전망 흡수)</td>
+<td>고정효과</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(c_{m(j)}\)</span></td>
+<td>차 모델 고정효과</td>
+<td>고정효과</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\xi_{jt}\)</span></td>
+<td>관측불가 제품·연도 충격</td>
+<td>오차</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\varepsilon_{ijt}\)</span></td>
+<td>개별 특이 취향 충격</td>
+<td>오차(검벨)</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="모형과-식별-전략" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="모형과-식별-전략"><span class="header-section-number">3</span> 모형과 식별 전략</h2>
+<section id="수요-식-1" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="수요-식-1"><span class="header-section-number">3.1</span> 수요 (식 1)</h3>
+<p><span class="math display">\[ U_{ijt} = x_{jt}\beta_i - \alpha_i p_{jt} + a_t + b_t\,\mathbf{1}^{EV}_{j} + c_{m(j)} + \xi_{jt} + \varepsilon_{ijt} \]</span></p>
+<p>소비자 <span class="math inline">\(i\)</span>의 차량 <span class="math inline">\(j\)</span>에 대한 간접효용이다. 외부재(<span class="math inline">\(j=0\)</span>, 신차 미구매)의 효용은 <span class="math inline">\(U_{i0t}=\varepsilon_{i0t}\)</span>로 정규화한다. 무작위계수는</p>
+<p><span class="math display">\[ \beta_i = \beta + \Sigma\,\nu^{\beta}_i,\ \nu^{\beta}_i\sim N(0,I_l);\qquad \alpha_i = \exp(\alpha_0 + \alpha_1\nu^{\alpha}_i),\ \nu^{\alpha}_i\sim N(0,1). \]</span></p>
+<p>가격민감도 <span class="math inline">\(\alpha_i\)</span>를 <strong>로그정규</strong>로 둔 것이 중요하다. 모든 소비자의 가격계수가 음수로 유지되어, 단순 로짓의 비현실적 대체(IIA)를 피하고 “비슷한 가격대 차끼리 더 많이 대체된다”는 패턴을 만들어낸다. 시장점유율은 무작위계수에 대해 적분한 혼합 로짓 확률이며(식 5), 연도당 2,500개 시뮬레이션 추출로 근사한다.</p>
+<p><code>연도효과 $a_t$</code>는 거시 환경과 “신차 vs 미구매”의 평균 매력을, <code>EV-연도효과 $b_t$</code>는 그 해의 EV 고유 효과(EV 품질, <strong>충전망 확대를 포함한 가격·에너지 외 기타 인센티브</strong>)를, <code>모델 고정효과 $c_{m(j)}$</code>는 모델의 디자인·이미지·프레스티지의 시간불변 평균을 흡수한다. 데이터에 개별 변동이 없는 통행료·버스전용차로 등 “기타 인센티브”가 <span class="math inline">\(b_t\)</span>에 한데 들어간다는 점이 §6의 “EV 효과 2010” 반사실을 해석하는 열쇠다.</p>
+</section>
+<section id="공급-식-67" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="공급-식-67"><span class="header-section-number">3.2</span> 공급 (식 6–7)</h3>
+<p>판매가는 마진 + 한계비용 + 등록세 + VAT로 분해된다. 기업 <span class="math inline">\(f\)</span>는 자사 제품 가격으로 변동이윤 <span class="math inline">\(\sum_{j\in J_{ft}}(p^*_{jt}-c_{jt})Q_{jt}\)</span>를 극대화하며(<span class="math inline">\(p^*_{jt}=(p_{jt}-\tau_{jt})/(1+v_{jt})\)</span>), 베르트랑–내쉬 1계조건은 행렬형으로</p>
+<p><span class="math display">\[ \varphi_t * s_t(p_t,\delta_t,\theta) + \Delta_t(p_t)\big[\varphi_t*(p_t-\tau_t) - c_t\big] = 0. \]</span></p>
+<p>이 식의 쓰임이 두 가지다: ① 관측가격·세금에서 한계비용 <span class="math inline">\(c_t\)</span>를 역산하고, ② 반사실 세제(=<span class="math inline">\(\tau, v\)</span> 변경)에서 <span class="math inline">\(s_t,\Delta_t\)</span>가 바뀔 때 <strong>새 균형가격 <span class="math inline">\(p_t\)</span>를 다시 푼다</strong>. 균형해는 Morrow–Skerlos(2011) 고정점 방법으로 구한다. 덕분에 “세금을 바꾸면 기업이 가격을 어떻게 조정하는가(전가, pass-through)”가 모형 내부에서 내생적으로 결정된다.</p>
+</section>
+<section id="추정과-식별-식-810" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="추정과-식별-식-810"><span class="header-section-number">3.3</span> 추정과 식별 (식 8–10)</h3>
+<p>각 시점·<span class="math inline">\(\theta\)</span>에서 BLP 축약사상으로 <span class="math inline">\(S_{jt}=s_{jt}(p_t,\delta_t,\theta)\)</span>를 만족하는 평균효용 <span class="math inline">\(\delta_t\)</span>를 역산하고, <span class="math inline">\(\xi_{jt}(\theta)=\delta_{jt}(\theta)-x_{jt}\beta-D_{jt}\gamma\)</span>로 오차를 구성해 GMM으로 추정한다.</p>
+<ul>
+<li><strong>식별 가정 (식 9)</strong>: <span class="math inline">\(E[\xi_{jt}(\theta_0)\mid x, D, \tau]=0\)</span>. 제품특성 <span class="math inline">\(x\)</span>는 <span class="math inline">\(\xi\)</span>가 실현되기 전에 (노르웨이가 미미한 비중인) <strong>글로벌 시장</strong> 기준으로 정해지므로 평균독립이 성립할 여지가 큰 환경이다. 연도·EV-연도·모델 고정효과가 각 집단 평균을 흡수하므로 <span class="math inline">\(\xi\)</span>에는 제품-연도 고유의 잔차만 남는다.</li>
+<li><strong>가격 내생성 → 등록세 도구변수</strong>: 가격은 관측불가 수요충격과 양의 상관이라 OLS는 가격계수를 과소추정한다. 등록세 <span class="math inline">\(\tau\)</span>는 특성의 <strong>볼록·증가 함수</strong>라 특성의 선형효과를 통제한 뒤에도 가격과 부분상관을 갖고, 배제 제약(가격을 통제하면 세금은 선택과 무관)을 만족한다. (선행: Goolsbee–Petrin 2004, Thomassen 2017.)</li>
+<li><strong>무작위계수 <span class="math inline">\(\Sigma\)</span> → 차별화 도구변수</strong>: Gandhi–Houde(2020)의 차별화 도구 <span class="math inline">\(z_{jt}\)</span>(제품 <span class="math inline">\(j\)</span>와 경쟁제품 간 특성 거리의 평균제곱·교호항)로 식별. <span class="math inline">\(\Sigma=0\)</span>이면 차별화 지표가 점유율과 무관하지만, <span class="math inline">\(\Sigma\)</span>가 크면 덜 차별화된 제품일수록 인접 경쟁자에 손님을 뺏겨 점유율이 낮아진다는 직관.</li>
+</ul>
+</section>
+</section>
+<section id="섹션별-해설" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="섹션별-해설"><span class="header-section-number">4</span> 섹션별 해설</h2>
+<section id="서론" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="서론"><span class="header-section-number">4.1</span> 서론</h3>
+<p>세 가지 인센티브 묶음(구매세 면제 / 연료세 / 기타 EV 효과)을 정의하고, EV 품질 향상은 글로벌 공통이므로 노르웨이의 격차는 정책으로 설명해야 함을 논증한다. 본문에서 반사실 결과(66→60, 25, 47, 10%)와 내재 탄소가격(1,700 USD/톤), 후생 이득(350 USD)을 미리 예고한다.</p>
+</section>
+<section id="데이터와-시장-개관" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="데이터와-시장-개관"><span class="header-section-number">4.2</span> 데이터와 시장 개관</h3>
+<p>제품 정의(특성 조합), 등록세 구조(2021년 기준 88 g/km 이하 무세·이후 볼록 증가, 무게 성분), 기타 인센티브(통행료·페리·주차·버스전용차로), 충전 용량 추이(2012년 58대 동시충전 → 2021년 4,131대; 단 EV 소유자 88%는 가정 충전)를 정리. Table 1은 연도별 브랜드·모델·제품 수, 판매대수, 판매가중 평균 가격·세금·특성을 보여준다.</p>
+</section>
+<section id="구조-모형-추정-학술적-기여의-본체" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="구조-모형-추정-학술적-기여의-본체"><span class="header-section-number">4.3</span> 구조 모형 / 추정 — <em>학술적 기여의 본체</em></h3>
+<p>위 “모형과 식별 전략” 참조. 이 부분이 논문의 실질 기여다.</p>
+</section>
+<section id="추정-결과-table-3-4" class="level3" data-number="4.4">
+<h3 data-number="4.4" class="anchored" data-anchor-id="추정-결과-table-3-4"><span class="header-section-number">4.4</span> 추정 결과 (Table 3, 4)</h3>
+<ul>
+<li><strong>가격계수</strong>: 단순 로짓에서 가격을 자기 도구로 쓰면 −0.666, 등록세 도구를 쓰면 −2.405(도구변수가 하향편의 교정). 기준 모형인 <strong>혼합 로짓의 평균 내재 가격계수는 −16.28</strong>. 1단계 회귀의 등록세 계수 <span class="math inline">\(t=6.9\)</span>(<span class="math inline">\(F=47.6\)</span>)로 약한 도구가 아니다.</li>
+<li><strong>dcost</strong> 계수 −0.705. km당 에너지비용을 0.84 NOK(2021년 EV–ICE 평균차) 올리면 평균 소비자에게 차량가치 약 36,400 NOK 하락에 해당(<span class="math inline">\(0.84\times0.705/16.28=0.0364\)</span> 백만 NOK).</li>
+<li>길이(+), 무게(−)는 유의, 출력·CO₂는 유의하지 않음. 초기 연도 CO₂ 미보고는 별도 더미로 처리.</li>
+<li><strong>대체패턴(Table 4)</strong>: 2021년 제품을 가격 4분위로 나눠, 한 제품 가격을 한계적으로 올렸을 때 이탈 소비자가 어디로 가는지 측정. 최저 분위는 46%가 같은 분위로(외부재 이탈 11%), 4분위는 외부재 이탈이 2%에 불과. 같은·인접 그룹으로의 비대칭 대체는 혼합 로짓에서만 나오는 특성(단순 로짓의 전환비율은 점유율만의 함수).</li>
+</ul>
+</section>
+<section id="반사실-정책-실험-6-명목상의-메인-결과" class="level3" data-number="4.5">
+<h3 data-number="4.5" class="anchored" data-anchor-id="반사실-정책-실험-6-명목상의-메인-결과"><span class="header-section-number">4.5</span> 반사실 정책 실험 (§6) — <em>명목상의 메인 결과</em></h3>
+<p>2012–2021에 대해 균형을 다시 풀어 EV 점유율, 평균/총 CO₂·무게, 판매대수, 가격 전가, 세수·이윤·소비자잉여를 계산.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>반사실(2021)</th>
+<th style="text-align: right;">EV 점유율</th>
+<th>비고</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>관측</td>
+<td style="text-align: right;">66%</td>
+<td>기준</td>
+</tr>
+<tr class="even">
+<td>No fuel tax</td>
+<td style="text-align: right;">60%</td>
+<td>−6%p, 보통</td>
+</tr>
+<tr class="odd">
+<td>No EV tax exemption</td>
+<td style="text-align: right;"><strong>25%</strong></td>
+<td>단일 효과 최대(완화판 Alt. 37%)</td>
+</tr>
+<tr class="even">
+<td>EV effect 2010</td>
+<td style="text-align: right;">47%</td>
+<td>기타 인센티브·충전망</td>
+</tr>
+<tr class="odd">
+<td>세 가지 모두</td>
+<td style="text-align: right;">10%</td>
+<td>인센티브 약한 국가 경로</td>
+</tr>
+</tbody>
+</table>
+<p>Table 6(2021, 관측 대비 % 변화): 구매세 면제 제거 시 총무게 −21.9%, 총 CO₂ +167.0%, 판매대수 −10.7%; 세 가지 모두 제거 시 −22.8% / +221.2% / −10.5%. 면제 제거의 내재 탄소가격은 약 14,600 NOK(1,700 USD)/톤. 그럼에도 소비자잉여+이윤+세수를 합치면 면제는 <strong>순후생 이득</strong>(배출 가치 제외하고 약 3,000 NOK ≈ 350 USD). 추가 실험: 비전기차 2배 과세 → 76%, 4배 → 94%, 금지 → 100%.</p>
+</section>
+<section id="결론" class="level3" data-number="4.6">
+<h3 data-number="4.6" class="anchored" data-anchor-id="결론"><span class="header-section-number">4.6</span> 결론</h3>
+<p>구매세 면제가 노르웨이 EV 성공의 대부분을 설명. 모방국은 EV를 보조할 게 아니라 ICE에 무겁게 과세해야 하며, 전면 금지의 대안으로 차등 과세가 매력적일 수 있음. 분배효과·개별 비가격 인센티브·충전소는 향후 과제.</p>
+</section>
+</section>
+<section id="주요-결과-해석" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="주요-결과-해석"><span class="header-section-number">5</span> 주요 결과 해석</h2>
+<ul>
+<li><strong>명목 메인 결과</strong>: 구매세 면제가 단일 정책으로 가장 큰 지렛대(66%→25%). 정책 우선순위를 명확히 제시.</li>
+<li><strong>실질 핵심 기여</strong>: 그 수치를 <em>신뢰할 수 있게</em> 만드는 구조 모형 — 가격 내생성(등록세 IV)·현실적 대체(무작위계수)·내생적 가격 전가(공급 균형)를 모두 갖춘 통합 틀. 같은 모형에서 배출·무게·세수·후생을 일관되게 환산할 수 있다는 점이 단순 회귀 대비 결정적 우위다.</li>
+</ul>
+</section>
+<section id="강건성-한계" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="강건성-한계"><span class="header-section-number">6</span> 강건성 / 한계</h2>
+<ul>
+<li>단순 로짓 vs 혼합 로짓 대체패턴 비교, 도구변수 관련성(<span class="math inline">\(F=47.6\)</span>), 면제 제거 완화판(37%), 차등 과세 vs 금지 실험으로 결론의 견고함을 점검.</li>
+<li><strong>한계</strong>: ① 정태 모형이라 동태적·미래지향 수요(가격 하락·품질 향상 기대)를 못 잡아 탄력성·반사실에 편의 가능(Gowrisankaran–Rysman 2012). ② 충전소 공급의 동시성(<span class="math inline">\(b_t\)</span> 편의 가능) → 충전망 효과는 상한 해석. ③ 분배효과(고소득 EV 구매자에 후생 집중)와 개별 비가격 인센티브 분리 식별은 범위 밖. ④ EV 충전 전력의 배출은 EU ETS 총량제 하에서 순효과 0으로 가정.</li>
+</ul>
+</section>
+<section id="보충-자료-슬라이드-생략-섹션" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="보충-자료-슬라이드-생략-섹션"><span class="header-section-number">7</span> 보충 자료 (슬라이드 생략 섹션)</h2>
+<ul>
+<li><strong>Appendix A. 보충 자료(Supplementary data)</strong>: 온라인 보충자료는 doi:10.1016/j.eneco.2025.108490 에서 확인.</li>
+<li><strong>CRediT 기여</strong>: Cincotta(초고·정형분석·데이터·개념), Thomassen(초고·지도·정형분석·데이터·개념).</li>
+</ul>
+</section>
+<section id="참고문헌-선별-원문-유지" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="참고문헌-선별-원문-유지"><span class="header-section-number">8</span> 참고문헌 (선별, 원문 유지)</h2>
+<ul>
+<li>Berry, S., Levinsohn, J., Pakes, A. (1995). <em>Automobile prices in market equilibrium.</em> Econometrica 63(4), 841–890.</li>
+<li>Bresnahan, T.F. (1987). <em>Competition and collusion in the American automobile industry: The 1955 price war.</em> J. Ind. Econ. 35(4), 457–482.</li>
+<li>Petrin, A. (2002). <em>Quantifying the benefits of new products: The case of the minivan.</em> (BLP 응용.)</li>
+<li>Gandhi, A., Houde, J.-F. (2020). <em>Measuring substitution patterns in differentiated products industries.</em> (차별화 도구변수.)</li>
+<li>Gandhi, A., Nevo, A. (2021). <em>Empirical models of demand and supply in differentiated products industries.</em> Handbook of Industrial Organization.</li>
+<li>Morrow, W.R., Skerlos, S.J. (2011). <em>Fixed-point approaches to computing Bertrand-Nash equilibrium prices under mixed-logit demand.</em></li>
+<li>Springel, K. (2021). / Johansen, B.G., Munk-Nielsen, A. (2022). <em>노르웨이 EV 인센티브 관련 선행연구.</em></li>
+<li>Miller, N., Weinberg, M. (2017). <em>잠재 시장규모 설정 참조.</em></li>
+<li>Timmers, V.R.J.H., Achten, P.A.J. (2016). <em>비배기 미세먼지와 차량 무게.</em></li>
+</ul>
+<blockquote class="blockquote">
+<p>전체 참고문헌은 논문 원문(Energy Economics 146, 2025, 108490)의 References를 따른다.</p>
+</blockquote>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "복사완료!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "복사완료!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/dongdahi\.github\.io\/ispl\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 Dongnyok Shim · License: CC BY-SA 4.0</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/dongdahi">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

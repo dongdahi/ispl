@@ -10,6 +10,83 @@
 <atom:link href="https://dongdahi.github.io/ispl/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.9.38</generator>
-<lastBuildDate>Mon, 01 Jun 2026 03:11:56 GMT</lastBuildDate>
+<lastBuildDate>Wed, 27 May 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>노르웨이의 전기차 인센티브 평가 — 노트 &amp; 슬라이드</title>
+  <dc:creator>Dongnyok Shim</dc:creator>
+  <link>https://dongdahi.github.io/ispl/blog/posts/norway-ev-incentives/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>세계 최고의 전기차 점유율(2021년 신차의 66%)을 달성한 노르웨이를 사례로, <strong>어떤 정책이 EV 채택을 얼마나 끌어올렸는지</strong>를 구조 모형으로 정량화한 논문을 해설한 자료입니다. 신차시장 전체를 BLP류 무작위계수 이산선택 수요모형과 과점(베르트랑–내쉬) 공급으로 추정한 뒤, 특정 인센티브를 “끈” 반사실 세계에서 균형을 다시 풀어 점유율·배출·세수·후생을 비교합니다. 핵심 결론은 <strong>구매세(VAT+등록세) 면제가 단연 가장 큰 지렛대</strong>라는 것(없애면 점유율 66%→25%)입니다.</p>
+<div class="grid">
+<div class="g-col-12 g-col-md-6">
+<p><a href="notes.html" class="btn btn-primary">📖 독서 노트 보기</a></p>
+</div>
+<div class="g-col-12 g-col-md-6">
+<p><a href="slides.html" class="btn btn-outline-primary">📊 해설 슬라이드 보기</a></p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>노트와 슬라이드는 <code>.qmd</code> 원본으로 사이트와 함께 렌더됩니다 — 노트는 사이트 테마가 입혀진 페이지로, 슬라이드는 revealjs 프레젠테이션으로 열립니다.</p>
+</div>
+</div>
+</div>
+
+
+
+ ]]></description>
+  <category>Energy Transformation</category>
+  <guid>https://dongdahi.github.io/ispl/blog/posts/norway-ev-incentives/</guid>
+  <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>(예시) 새 글 작성 템플릿 — 노트·슬라이드 연결 방법</title>
+  <dc:creator>Dongnyok Shim</dc:creator>
+  <link>https://dongdahi.github.io/ispl/blog/posts/example-digital-transformation/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>새 글을 추가하려면 <code>blog/posts/</code> 아래에 폴더를 하나 만들고 그 안에 <code>index.qmd</code> 를 넣으면 됩니다. 머리말의 <code>categories:</code> 에 주제(<code>Market Analysis</code> / <code>Digital Transformation</code> / <code>Energy Transformation</code>)를 적으면 자동으로 분류됩니다.</p>
+<section id="agent-결과물-연결하기" class="level2">
+<h2 class="anchored" data-anchor-id="agent-결과물-연결하기">Agent 결과물 연결하기</h2>
+<p>자료 파일(노트 HTML, 슬라이드 PDF 등)을 <strong>이 글 폴더 안에</strong> 같이 두고 상대경로로 링크하면, 빌드 시 자동으로 함께 배포됩니다.</p>
+<pre><code>blog/posts/my-post/
+├─ index.qmd                 ← 이 글
+├─ review.html               ← Agent로 만든 노트(독립형 HTML)
+└─ slides.pdf                ← 슬라이드 (PDF 또는 revealjs HTML)</code></pre>
+<p>링크 예시:</p>
+<p><a href="review.html" class="btn btn-primary" target="_blank">📄 노트 보기</a> <a href="slides.pdf" class="btn btn-outline-primary" target="_blank">📊 슬라이드 보기</a></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>슬라이드를 <code>.qmd</code> 원본으로 갖고 계시면, 그 파일 머리말에 <code>format: revealjs</code> 를 넣어 사이트와 함께 렌더할 수도 있습니다(별도 HTML/PDF로 안 만들어도 됨).</p>
+</div>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>Digital Transformation</category>
+  <guid>https://dongdahi.github.io/ispl/blog/posts/example-digital-transformation/</guid>
+  <pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate>
+</item>
 </channel>
 </rss>
