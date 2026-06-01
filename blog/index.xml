@@ -23,10 +23,10 @@
 <p>세계 최고의 전기차 점유율(2021년 신차의 66%)을 달성한 노르웨이를 사례로, <strong>어떤 정책이 EV 채택을 얼마나 끌어올렸는지</strong>를 구조 모형으로 정량화한 논문을 해설한 자료입니다. 신차시장 전체를 BLP류 무작위계수 이산선택 수요모형과 과점(베르트랑–내쉬) 공급으로 추정한 뒤, 특정 인센티브를 “끈” 반사실 세계에서 균형을 다시 풀어 점유율·배출·세수·후생을 비교합니다. 핵심 결론은 <strong>구매세(VAT+등록세) 면제가 단연 가장 큰 지렛대</strong>라는 것(없애면 점유율 66%→25%)입니다.</p>
 <div class="grid">
 <div class="g-col-12 g-col-md-6">
-<p><a href="notes.html" class="btn btn-primary">📖 독서 노트 보기</a></p>
+<p><a href="notes.html" class="btn btn-primary">📖 독서 노트</a></p>
 </div>
 <div class="g-col-12 g-col-md-6">
-<p><a href="slides.html" class="btn btn-outline-primary">📊 해설 슬라이드 보기</a></p>
+<p><a href="slides.html" class="btn btn-outline-primary">📊 해설 슬라이드</a></p>
 </div>
 </div>
 <div class="callout callout-style-simple callout-note">
@@ -35,7 +35,7 @@
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>노트와 슬라이드는 <code>.qmd</code> 원본으로 사이트와 함께 렌더됩니다 — 노트는 사이트 테마가 입혀진 페이지로, 슬라이드는 revealjs 프레젠테이션으로 열립니다.</p>
+<p>노트와 슬라이드는 <code>.qmd</code> 원본으로 사이트와 함께 렌더링됨 — 노트는 사이트 테마가 입혀진 페이지로, 슬라이드는 revealjs 프레젠테이션으로 열림.</p>
 </div>
 </div>
 </div>
