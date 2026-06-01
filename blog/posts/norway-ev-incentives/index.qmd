@@ -2,8 +2,7 @@
 title: "노르웨이의 전기차 인센티브 평가 — 노트 & 슬라이드"
 description: >
   Cincotta & Thomassen (Energy Economics, 2025) 논문 해설.
-  BLP 무작위계수 수요모형 + 과점 공급으로 노르웨이 EV 인센티브의 기여를
-  분해하고, 구매세 면제가 가장 큰 지렛대(없으면 점유율 66%→25%)임을 보인 연구.
+  BLP 무작위계수 수요모형 + 과점 공급으로 노르웨이 EV 인센티브의 기여를 분해하고, 구매세 면제가 가장 큰 지렛대(없으면 점유율 66%→25%)임을 보인 연구.
 date: "2026-05-27"
 categories: [Energy Transformation]
 ---
@@ -12,13 +11,13 @@ categories: [Energy Transformation]
 
 ::: {.grid}
 ::: {.g-col-12 .g-col-md-6}
-[📖 독서 노트 보기](notes.html){.btn .btn-primary role="button"}
+[📖 독서 노트](notes.html){.btn .btn-primary role="button"}
 :::
 ::: {.g-col-12 .g-col-md-6}
-[📊 해설 슬라이드 보기](slides.html){.btn .btn-outline-primary role="button"}
+[📊 해설 슬라이드](slides.html){.btn .btn-outline-primary role="button"}
 :::
 :::
 
 ::: {.callout-note appearance="simple"}
-노트와 슬라이드는 `.qmd` 원본으로 사이트와 함께 렌더됩니다 — 노트는 사이트 테마가 입혀진 페이지로, 슬라이드는 revealjs 프레젠테이션으로 열립니다.
+노트와 슬라이드는 `.qmd` 원본으로 사이트와 함께 렌더링됨 — 노트는 사이트 테마가 입혀진 페이지로, 슬라이드는 revealjs 프레젠테이션으로 열림.
 :::
