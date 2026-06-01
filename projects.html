@@ -33,8 +33,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -72,65 +70,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-categories','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Projects – DNS &amp; ISPL">
@@ -233,13 +173,21 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">연도</h2>
+   
+  <ul>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">2025</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2024</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -249,7 +197,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
 
     
   
@@ -261,17 +209,62 @@ window.Quarto = {
 </header>
 
 
-<p>지금까지 수행한 프로젝트를 주제별로 정리합니다 — <strong>Market Analysis · Digital Transformation · Energy Transformation</strong>. 각 프로젝트는 <code>projects/</code> 아래 폴더 + <code>index.qmd</code> 로 추가하며, 관련 보고서·슬라이드·노트를 같은 폴더에 두고 링크할 수 있습니다.</p>
+<p>수행한 프로젝트를 <strong>연도별</strong>로 정리합니다. 각 항목은 주제 · 발주기관 · 수행기간으로 구성됩니다.</p>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section">2025</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">주제</th>
+<th style="text-align: left;">발주기관</th>
+<th style="text-align: left;">수행기간</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">(프로젝트 주제를 적으세요)</td>
+<td style="text-align: left;">(발주기관)</td>
+<td style="text-align: left;">2025.03 – 2025.12</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">(프로젝트 주제)</td>
+<td style="text-align: left;">(발주기관)</td>
+<td style="text-align: left;">2025.01 – 2025.08</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1">2024</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">주제</th>
+<th style="text-align: left;">발주기관</th>
+<th style="text-align: left;">수행기간</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">(프로젝트 주제)</td>
+<td style="text-align: left;">(발주기관)</td>
+<td style="text-align: left;">2024.04 – 2024.11</td>
+</tr>
+</tbody>
+</table>
+<!--
+새 연도는 "## 2023" 처럼 제목을 추가하고 그 아래 같은 형식의 표를 넣으면 됩니다.
+표는 위에서 아래로 최신 연도가 먼저 오도록 배치하세요.
+
+보고서·슬라이드 같은 자료를 연결하려면 '주제' 칸에 링크를 걸면 됩니다. 예:
+| [지능형 CCTV 편익 추정](files/cctv-report.pdf) | OO기관 | 2024.04 – 2024.11 |
+(파일은 projects 폴더가 아니라, 예를 들어 루트의 files/ 같은 일반 폴더에 두고 링크)
+-->
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

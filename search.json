@@ -396,6 +396,20 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "지금까지 수행한 프로젝트를 주제별로 정리합니다 — Market Analysis · Digital Transformation · Energy Transformation. 각 프로젝트는 projects/ 아래 폴더 + index.qmd 로 추가하며, 관련 보고서·슬라이드·노트를 같은 폴더에 두고 링크할 수 있습니다.\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "수행한 프로젝트를 연도별로 정리합니다. 각 항목은 주제 · 발주기관 · 수행기간으로 구성됩니다."
+  },
+  {
+    "objectID": "projects.html#section",
+    "href": "projects.html#section",
+    "title": "Projects",
+    "section": "2025",
+    "text": "2025\n\n\n\n주제\n발주기관\n수행기간\n\n\n\n\n(프로젝트 주제를 적으세요)\n(발주기관)\n2025.03 – 2025.12\n\n\n(프로젝트 주제)\n(발주기관)\n2025.01 – 2025.08"
+  },
+  {
+    "objectID": "projects.html#section-1",
+    "href": "projects.html#section-1",
+    "title": "Projects",
+    "section": "2024",
+    "text": "2024\n\n\n\n주제\n발주기관\n수행기간\n\n\n\n\n(프로젝트 주제)\n(발주기관)\n2024.04 – 2024.11"
   }
 ]
