@@ -9,7 +9,7 @@ title: "Dongnyok Shim"
 ::: korean-info
 **건국대학교**
 
-**산업경영융합학부(School of interdisciplinary industrial management)**
+**산업경영융합학부(School of Interdisciplinary Industrial Management)**
 
 ✉️ sk4me\@konkuk.ac.kr
 :::
@@ -62,12 +62,12 @@ title: "Dongnyok Shim"
 
 ### Internal Position
 
--   Dean of Graduate school of interdisciplinary industrial management
 -   Director, Innovation Strategy and Policy Lab
 
 ### External Position
 
 -   Outside Director, [NEXT group](https://nextgroup.or.kr/ko/intro/group/list)
+-   Affiliated Faculty, [KENTECH Energy Policy Institute](https://energypolicy.kentech.ac.kr/)
 
 ## Achievements
 
