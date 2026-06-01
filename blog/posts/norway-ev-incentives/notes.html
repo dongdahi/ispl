@@ -218,7 +218,6 @@ window.Quarto = {
   <li><a href="#주요-결과-해석" id="toc-주요-결과-해석" class="nav-link" data-scroll-target="#주요-결과-해석"><span class="header-section-number">5</span> 주요 결과 해석</a></li>
   <li><a href="#강건성-한계" id="toc-강건성-한계" class="nav-link" data-scroll-target="#강건성-한계"><span class="header-section-number">6</span> 강건성 / 한계</a></li>
   <li><a href="#보충-자료-슬라이드-생략-섹션" id="toc-보충-자료-슬라이드-생략-섹션" class="nav-link" data-scroll-target="#보충-자료-슬라이드-생략-섹션"><span class="header-section-number">7</span> 보충 자료 (슬라이드 생략 섹션)</a></li>
-  <li><a href="#참고문헌-선별-원문-유지" id="toc-참고문헌-선별-원문-유지" class="nav-link" data-scroll-target="#참고문헌-선별-원문-유지"><span class="header-section-number">8</span> 참고문헌 (선별, 원문 유지)</a></li>
   </ul>
 </nav>
     </div>
@@ -384,7 +383,7 @@ window.Quarto = {
 <p>소비자 <span class="math inline">\(i\)</span>의 차량 <span class="math inline">\(j\)</span>에 대한 간접효용이다. 외부재(<span class="math inline">\(j=0\)</span>, 신차 미구매)의 효용은 <span class="math inline">\(U_{i0t}=\varepsilon_{i0t}\)</span>로 정규화한다. 무작위계수는</p>
 <p><span class="math display">\[ \beta_i = \beta + \Sigma\,\nu^{\beta}_i,\ \nu^{\beta}_i\sim N(0,I_l);\qquad \alpha_i = \exp(\alpha_0 + \alpha_1\nu^{\alpha}_i),\ \nu^{\alpha}_i\sim N(0,1). \]</span></p>
 <p>가격민감도 <span class="math inline">\(\alpha_i\)</span>를 <strong>로그정규</strong>로 둔 것이 중요하다. 모든 소비자의 가격계수가 음수로 유지되어, 단순 로짓의 비현실적 대체(IIA)를 피하고 “비슷한 가격대 차끼리 더 많이 대체된다”는 패턴을 만들어낸다. 시장점유율은 무작위계수에 대해 적분한 혼합 로짓 확률이며(식 5), 연도당 2,500개 시뮬레이션 추출로 근사한다.</p>
-<p><code>연도효과 $a_t$</code>는 거시 환경과 “신차 vs 미구매”의 평균 매력을, <code>EV-연도효과 $b_t$</code>는 그 해의 EV 고유 효과(EV 품질, <strong>충전망 확대를 포함한 가격·에너지 외 기타 인센티브</strong>)를, <code>모델 고정효과 $c_{m(j)}$</code>는 모델의 디자인·이미지·프레스티지의 시간불변 평균을 흡수한다. 데이터에 개별 변동이 없는 통행료·버스전용차로 등 “기타 인센티브”가 <span class="math inline">\(b_t\)</span>에 한데 들어간다는 점이 §6의 “EV 효과 2010” 반사실을 해석하는 열쇠다.</p>
+<p><code>연도효과</code> <span class="math inline">\(a_t\)</span>는 거시 환경과 “신차 vs 미구매”의 평균 매력을, <code>EV-연도효과</code> <span class="math inline">\(b_t\)</span>는 그 해의 EV 고유 효과(EV 품질, <strong>충전망 확대를 포함한 가격·에너지 외 기타 인센티브</strong>)를, <code>모델 고정효과 $c_{m(j)}$</code>는 모델의 디자인·이미지·프레스티지의 시간불변 평균을 흡수한다. 데이터에 개별 변동이 없는 통행료·버스전용차로 등 “기타 인센티브”가 <span class="math inline">\(b_t\)</span>에 한데 들어간다는 점이 §6의 “EV 효과 2010” 반사실을 해석하는 열쇠다.</p>
 </section>
 <section id="공급-식-67" class="level3" data-number="3.2">
 <h3 data-number="3.2" class="anchored" data-anchor-id="공급-식-67"><span class="header-section-number">3.2</span> 공급 (식 6–7)</h3>
@@ -489,25 +488,7 @@ window.Quarto = {
 <h2 data-number="7" class="anchored" data-anchor-id="보충-자료-슬라이드-생략-섹션"><span class="header-section-number">7</span> 보충 자료 (슬라이드 생략 섹션)</h2>
 <ul>
 <li><strong>Appendix A. 보충 자료(Supplementary data)</strong>: 온라인 보충자료는 doi:10.1016/j.eneco.2025.108490 에서 확인.</li>
-<li><strong>CRediT 기여</strong>: Cincotta(초고·정형분석·데이터·개념), Thomassen(초고·지도·정형분석·데이터·개념).</li>
 </ul>
-</section>
-<section id="참고문헌-선별-원문-유지" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="참고문헌-선별-원문-유지"><span class="header-section-number">8</span> 참고문헌 (선별, 원문 유지)</h2>
-<ul>
-<li>Berry, S., Levinsohn, J., Pakes, A. (1995). <em>Automobile prices in market equilibrium.</em> Econometrica 63(4), 841–890.</li>
-<li>Bresnahan, T.F. (1987). <em>Competition and collusion in the American automobile industry: The 1955 price war.</em> J. Ind. Econ. 35(4), 457–482.</li>
-<li>Petrin, A. (2002). <em>Quantifying the benefits of new products: The case of the minivan.</em> (BLP 응용.)</li>
-<li>Gandhi, A., Houde, J.-F. (2020). <em>Measuring substitution patterns in differentiated products industries.</em> (차별화 도구변수.)</li>
-<li>Gandhi, A., Nevo, A. (2021). <em>Empirical models of demand and supply in differentiated products industries.</em> Handbook of Industrial Organization.</li>
-<li>Morrow, W.R., Skerlos, S.J. (2011). <em>Fixed-point approaches to computing Bertrand-Nash equilibrium prices under mixed-logit demand.</em></li>
-<li>Springel, K. (2021). / Johansen, B.G., Munk-Nielsen, A. (2022). <em>노르웨이 EV 인센티브 관련 선행연구.</em></li>
-<li>Miller, N., Weinberg, M. (2017). <em>잠재 시장규모 설정 참조.</em></li>
-<li>Timmers, V.R.J.H., Achten, P.A.J. (2016). <em>비배기 미세먼지와 차량 무게.</em></li>
-</ul>
-<blockquote class="blockquote">
-<p>전체 참고문헌은 논문 원문(Energy Economics 146, 2025, 108490)의 References를 따른다.</p>
-</blockquote>
 
 
 </section>
