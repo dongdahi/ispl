@@ -50,7 +50,7 @@ $$ \beta_i = \beta + \Sigma\,\nu^{\beta}_i,\ \nu^{\beta}_i\sim N(0,I_l);\qquad \
 
 가격민감도 $\alpha_i$를 **로그정규**로 둔 것이 중요하다. 모든 소비자의 가격계수가 음수로 유지되어, 단순 로짓의 비현실적 대체(IIA)를 피하고 "비슷한 가격대 차끼리 더 많이 대체된다"는 패턴을 만들어낸다. 시장점유율은 무작위계수에 대해 적분한 혼합 로짓 확률이며(식 5), 연도당 2,500개 시뮬레이션 추출로 근사한다.
 
-`연도효과 $a_t$`는 거시 환경과 "신차 vs 미구매"의 평균 매력을, `EV-연도효과 $b_t$`는 그 해의 EV 고유 효과(EV 품질, **충전망 확대를 포함한 가격·에너지 외 기타 인센티브**)를, `모델 고정효과 $c_{m(j)}$`는 모델의 디자인·이미지·프레스티지의 시간불변 평균을 흡수한다. 데이터에 개별 변동이 없는 통행료·버스전용차로 등 "기타 인센티브"가 $b_t$에 한데 들어간다는 점이 §6의 "EV 효과 2010" 반사실을 해석하는 열쇠다.
+`연도효과` $a_t$는 거시 환경과 "신차 vs 미구매"의 평균 매력을, `EV-연도효과` $b_t$는 그 해의 EV 고유 효과(EV 품질, **충전망 확대를 포함한 가격·에너지 외 기타 인센티브**)를, `모델 고정효과 $c_{m(j)}$`는 모델의 디자인·이미지·프레스티지의 시간불변 평균을 흡수한다. 데이터에 개별 변동이 없는 통행료·버스전용차로 등 "기타 인센티브"가 $b_t$에 한데 들어간다는 점이 §6의 "EV 효과 2010" 반사실을 해석하는 열쇠다.
 
 ### 공급 (식 6–7)
 
@@ -114,18 +114,3 @@ Table 6(2021, 관측 대비 % 변화): 구매세 면제 제거 시 총무게 −
 ## 보충 자료 (슬라이드 생략 섹션)
 
 - **Appendix A. 보충 자료(Supplementary data)**: 온라인 보충자료는 doi:10.1016/j.eneco.2025.108490 에서 확인.
-- **CRediT 기여**: Cincotta(초고·정형분석·데이터·개념), Thomassen(초고·지도·정형분석·데이터·개념).
-
-## 참고문헌 (선별, 원문 유지)
-
-- Berry, S., Levinsohn, J., Pakes, A. (1995). *Automobile prices in market equilibrium.* Econometrica 63(4), 841–890.
-- Bresnahan, T.F. (1987). *Competition and collusion in the American automobile industry: The 1955 price war.* J. Ind. Econ. 35(4), 457–482.
-- Petrin, A. (2002). *Quantifying the benefits of new products: The case of the minivan.* (BLP 응용.)
-- Gandhi, A., Houde, J.-F. (2020). *Measuring substitution patterns in differentiated products industries.* (차별화 도구변수.)
-- Gandhi, A., Nevo, A. (2021). *Empirical models of demand and supply in differentiated products industries.* Handbook of Industrial Organization.
-- Morrow, W.R., Skerlos, S.J. (2011). *Fixed-point approaches to computing Bertrand-Nash equilibrium prices under mixed-logit demand.*
-- Springel, K. (2021). / Johansen, B.G., Munk-Nielsen, A. (2022). *노르웨이 EV 인센티브 관련 선행연구.*
-- Miller, N., Weinberg, M. (2017). *잠재 시장규모 설정 참조.*
-- Timmers, V.R.J.H., Achten, P.A.J. (2016). *비배기 미세먼지와 차량 무게.*
-
-> 전체 참고문헌은 논문 원문(Energy Economics 146, 2025, 108490)의 References를 따른다.
