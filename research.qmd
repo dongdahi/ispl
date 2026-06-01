@@ -5,8 +5,6 @@ toc-depth: 2
 
 ## Publications
 
-동료심사 학술지 논문(SSCI · SCI · Scopus · KCI)입니다.
-
 {{< include partials/publications.qmd >}}
 
 ## Reports
