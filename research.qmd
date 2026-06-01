@@ -1,5 +1,32 @@
 ---
 title: "Research"
+toc-depth: 2
 ---
 
+학술 논문은 **Publications**, 학술연구가 아닌 기고글·보고서·칼럼 등은 **Reports** 로 구분해 정리합니다.
+
+## Publications
+
+동료심사 학술지 논문(SSCI · SCI · Scopus · KCI)입니다.
+
 {{< include partials/publications.qmd >}}
+
+## Reports
+
+학술연구 외의 기고글, 정책·연구 보고서, 칼럼 등을 모읍니다.
+
+::: {.callout-note}
+작성 예정입니다. (Coming soon)
+:::
+
+<!-- 항목을 추가할 때는 아래 형식을 참고하세요. 예:
+
+- **(2025) 보고서/칼럼 제목.** 발행처(예: OO연구원 / OO신문). [원문 링크](https://example.com)
+- **(2024) 기고글 제목.** 매체명. [원문 링크](https://example.com)
+
+또는 표 형태:
+
+| 연도 | 유형 | 제목 | 발행처 | 링크 |
+|------|------|------|--------|------|
+| 2025 | 칼럼 | 제목 | OO신문 | [link](https://example.com) |
+-->
