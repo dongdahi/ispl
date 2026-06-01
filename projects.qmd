@@ -1,5 +1,17 @@
 ---
-title: "projects"
+title: "Projects"
+subtitle: "수행 프로젝트 — Research & consulting projects"
+listing:
+  contents: projects        # projects/ 하위 폴더를 자동으로 목록화
+  type: default             # 목록형 (카드형으로 바꾸려면 grid)
+  sort: "date desc"
+  categories: true          # 주제별(Market / Digital / Energy) 분류
+  sort-ui: false
+  filter-ui: false
+  fields: [date, title, categories, description]
+page-layout: full
+toc: false
 ---
 
-Coming soon.
+지금까지 수행한 프로젝트를 주제별로 정리합니다 — **Market Analysis · Digital Transformation · Energy Transformation**.
+각 프로젝트는 `projects/` 아래 폴더 + `index.qmd` 로 추가하며, 관련 보고서·슬라이드·노트를 같은 폴더에 두고 링크할 수 있습니다.

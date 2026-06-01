@@ -41,9 +41,9 @@ website:
       - href: research.qmd
         text: Research
       - href: projects.qmd
-        text: Proj
-      - href: blogs.qmd
-        text: Blogs
+        text: Projects
+      - href: blog/index.qmd
+        text: Blog
       - href: lab.qmd
         text: LAB
   page-footer:
