@@ -347,3 +347,70 @@ a:hover { color: var(--accent-dk); }
   .report-year { grid-template-columns: 1fr; gap: .4rem; }
   .report-year-label { position: static; font-size: 1.2rem; }
 }
+
+/* =========================================================================
+   Projects (projects.qmd)
+   ========================================================================= */
+.project-wrap { margin-top: .5rem; }
+
+.project-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin: .25rem 0 1.5rem;
+}
+.project-stat {
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  border-radius: .6rem;
+  padding: .45rem .8rem;
+  font-size: .9rem;
+  color: var(--ink-soft);
+}
+.project-stat strong { color: var(--accent-dk); font-size: 1.05rem; }
+
+.project-list { display: grid; gap: .9rem; margin: 1rem 0 2rem; }
+.project-card {
+  border: 1px solid var(--rule);
+  border-radius: .9rem;
+  padding: 1rem 1.2rem;
+  background: var(--paper);
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(22,36,61,.10);
+  border-color: var(--accent);
+}
+.project-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: .45rem;
+}
+.project-role {
+  font-family: var(--sans);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .03em;
+  padding: .22rem .55rem;
+  border-radius: .4rem;
+  white-space: nowrap;
+}
+.role-pi { background: var(--accent); color: #fff; }              /* 연구책임 */
+.role-co { background: var(--paper-2); color: var(--ink-soft); border: 1px solid var(--rule); } /* 연구참여 */
+.project-period { font-size: .82rem; color: var(--ink-soft); white-space: nowrap; }
+.project-period .now { color: var(--accent-dk); font-weight: 600; }
+.project-title {
+  font-family: var(--serif);
+  font-size: 1.04rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--ink);
+}
+.project-org { font-size: .85rem; color: var(--ink-soft); margin-top: .3rem; }
+
+@media (max-width: 720px) {
+  .project-head { flex-wrap: wrap; gap: .4rem; }
+}
