@@ -272,3 +272,96 @@ a:hover { color: var(--accent-dk); }
   font-size: .85rem;
   color: var(--ink-soft);
 }
+
+/* =========================================================================
+   Reports (research.qmd #reports)
+   ========================================================================= */
+.report-wrap { margin-top: .5rem; }
+
+.report-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin: .25rem 0 .75rem;
+}
+.report-stat {
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  border-radius: .6rem;
+  padding: .45rem .8rem;
+  font-size: .9rem;
+  color: var(--ink-soft);
+}
+.report-stat strong { color: var(--accent-dk); font-size: 1.05rem; }
+
+.report-legend {
+  font-size: .82rem;
+  color: var(--ink-soft);
+  margin: 0 0 1.75rem;
+  line-height: 1.7;
+}
+.report-legend b { color: var(--ink); font-weight: 600; }
+
+.report-year {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--rule);
+}
+.report-year:last-of-type { border-bottom: 1px solid var(--rule); }
+.report-year-label {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--ink);
+  line-height: 1.1;
+  position: sticky;
+  top: 1rem;
+}
+.report-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: .85rem;
+}
+.report-item {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: .8rem;
+  align-items: start;
+}
+.report-badge {
+  justify-self: stretch;
+  text-align: center;
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: .64rem;
+  font-weight: 700;
+  letter-spacing: .03em;
+  padding: .26rem .3rem;
+  border-radius: .4rem;
+  white-space: nowrap;
+  margin-top: .15rem;
+}
+.report-body { display: flex; flex-direction: column; gap: .15rem; }
+.report-title {
+  font-size: .98rem;
+  line-height: 1.5;
+  color: var(--ink);
+  font-weight: 500;
+}
+.report-meta { font-size: .8rem; color: var(--ink-soft); }
+
+/* 기관 배지 색상 */
+.b-kisdi  { background: #e7edf7; color: #1d3a73; }
+.b-spri   { background: #e2f1ef; color: #0b5752; }
+.b-nafi   { background: #fbeede; color: #92500a; }
+.b-kirams { background: #f3e8ee; color: #8a2d5a; }
+
+@media (max-width: 720px) {
+  .report-year { grid-template-columns: 1fr; gap: .4rem; }
+  .report-year-label { position: static; font-size: 1.2rem; }
+  .report-item { grid-template-columns: 56px 1fr; gap: .6rem; }
+}
