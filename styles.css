@@ -282,7 +282,7 @@ a:hover { color: var(--accent-dk); }
   display: flex;
   flex-wrap: wrap;
   gap: .6rem;
-  margin: .25rem 0 .75rem;
+  margin: .25rem 0 1.5rem;
 }
 .report-stat {
   background: var(--paper-2);
@@ -293,14 +293,6 @@ a:hover { color: var(--accent-dk); }
   color: var(--ink-soft);
 }
 .report-stat strong { color: var(--accent-dk); font-size: 1.05rem; }
-
-.report-legend {
-  font-size: .82rem;
-  color: var(--ink-soft);
-  margin: 0 0 1.75rem;
-  line-height: 1.7;
-}
-.report-legend b { color: var(--ink); font-weight: 600; }
 
 .report-year {
   display: grid;
@@ -319,49 +311,39 @@ a:hover { color: var(--accent-dk); }
   position: sticky;
   top: 1rem;
 }
+
 .report-list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  gap: .85rem;
+  gap: .1rem;
 }
 .report-item {
-  display: grid;
-  grid-template-columns: 64px 1fr;
-  gap: .8rem;
-  align-items: start;
+  padding: .5rem 0 .5rem .9rem;
+  border-left: 2px solid var(--rule);
+  transition: border-color .12s ease, background .12s ease;
 }
-.report-badge {
-  justify-self: stretch;
-  text-align: center;
-  display: inline-block;
-  font-family: var(--sans);
-  font-size: .64rem;
-  font-weight: 700;
-  letter-spacing: .03em;
-  padding: .26rem .3rem;
-  border-radius: .4rem;
-  white-space: nowrap;
-  margin-top: .15rem;
+.report-item:hover {
+  border-left-color: var(--accent);
+  background: linear-gradient(90deg, rgba(15,118,110,.05), transparent 72%);
 }
-.report-body { display: flex; flex-direction: column; gap: .15rem; }
 .report-title {
+  display: block;
   font-size: .98rem;
   line-height: 1.5;
   color: var(--ink);
   font-weight: 500;
 }
-.report-meta { font-size: .8rem; color: var(--ink-soft); }
-
-/* 기관 배지 색상 */
-.b-kisdi  { background: #e7edf7; color: #1d3a73; }
-.b-spri   { background: #e2f1ef; color: #0b5752; }
-.b-nafi   { background: #fbeede; color: #92500a; }
-.b-kirams { background: #f3e8ee; color: #8a2d5a; }
+.report-meta {
+  display: block;
+  font-size: .82rem;
+  color: var(--ink-soft);
+  margin-top: .12rem;
+}
+.report-org { color: var(--ink); font-weight: 500; }
 
 @media (max-width: 720px) {
   .report-year { grid-template-columns: 1fr; gap: .4rem; }
   .report-year-label { position: static; font-size: 1.2rem; }
-  .report-item { grid-template-columns: 56px 1fr; gap: .6rem; }
 }
