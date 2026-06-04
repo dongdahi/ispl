@@ -75,7 +75,7 @@ Funded research projects and commissioned studies.
 </div>
 
 <div class="project-card">
-<div class="project-head"><span class="project-role role-co">연구참여</span><span class="project-period">2021.08 – 2021.10</span></div>
+<div class="project-head"><span class="project-role role-co">연구책임</span><span class="project-period">2021.08 – 2021.10</span></div>
 <div class="project-title">산업부문별 전문가 FGI에 기초한 AI도입의 노동수요 변화 방향 연구</div>
 <div class="project-org">한국노동연구원</div>
 </div>
