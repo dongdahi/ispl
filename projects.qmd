@@ -52,7 +52,7 @@ Funded research projects and commissioned studies.
 
 <div class="project-card">
 <div class="project-head"><span class="project-role role-co">연구참여</span><span class="project-period">2023.03 – 2023.09</span></div>
-<div class="project-title">원자력과 우주항공 분야 R&amp;D 투자의 사회‧경제적 파급효과 분석</div>
+<div class="project-title">원자력과 우주항공 분야 R&D 투자의 사회‧경제적 파급효과 분석</div>
 <div class="project-org">한국과학기술기획평가원(KISTEP)</div>
 </div>
 
